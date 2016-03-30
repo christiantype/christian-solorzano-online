@@ -88,6 +88,10 @@ header {
         margin-right: 0; } }
 
 #logo a {
+  font-size: 0.79012em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   -webkit-animation: color-change 5s infinite;
   -moz-animation: color-change 5s infinite;
   -o-animation: color-change 5s infinite;
@@ -154,7 +158,7 @@ nav ul li:nth-last-child(1) {
 /* =============== HOME =============== */
 #work {
   clear: both;
-  max-width: 80%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto; }
   #work::after {
@@ -213,7 +217,7 @@ li.block {
 .block {
   text-align: center;
   margin: 0;
-  font-size: 0.79012em;
+  font-size: 0.6243em;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px; }

@@ -111,6 +111,7 @@ header {
 
 
 #logo {
+
   @include span-columns(4);
   font-size: ms(0);
   @include media($small) { // As defined in _grid-settings.scss
@@ -123,6 +124,10 @@ header {
 
 
 #logo a {
+  font-size: ms(-2);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   -webkit-animation: color-change 5s infinite;
   -moz-animation: color-change 5s infinite;
   -o-animation: color-change 5s infinite;
@@ -187,7 +192,7 @@ nav ul li:nth-last-child(1) {
 
 #work {
   clear:both;
-  @include outer-container(80%);
+  @include outer-container(90%);
   @include media($small) { // As defined in _grid-settings.scss
     @include outer-container(100%);
 
@@ -214,7 +219,7 @@ li.block {
 .block {
   text-align: center;
   margin: 0;
-  font-size: ms(-2);
+  font-size: ms(-4);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
