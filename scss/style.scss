@@ -136,10 +136,10 @@ header {
 
 @-webkit-keyframes color-change {
   0% { color: #1d131c; }
-  25% { color: #4758b2; }
-  50% { color: #fda7ff; }
-  75% { color: #5880ff; }
-  100% { color: #aa3c62; }
+  25% { color: #777400; }
+  50% { color: #ff76ef; }
+  75% { color: #0035ff; }
+  100% { color: #34ff00; }
 }
 
 
@@ -306,7 +306,6 @@ li.block img:hover {
   font-weight: 600;
 }
 .aboutsection lh {
-  font-size: ms(0);
   padding-bottom:3px;
   font-size:ms(0);
   font-weight:600;
@@ -394,7 +393,14 @@ li.block img:hover {
   font-weight: 600;
 }
 
-
+.projectinfo p {
+  @include media($small) { // As defined in _grid-settings.scss
+    font-size:ms(0)
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    font-size:ms(-1)
+  }
+}
 
 .workimages {
 
