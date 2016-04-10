@@ -15,7 +15,7 @@ body {
   background-color: #ffffff;
   margin-top: 0em;
   color: #181818;
-  font-family: "Open Sans", sans-serif;
+  font-family: "sofia-pro", sans-serif;
   font-size: 1em;
   /* @include linear-gradient(to top, #324146, #b7c4ff, #adffe4 ); */ }
   body::after {
@@ -101,16 +101,17 @@ header {
   0% {
     color: #1d131c; }
   25% {
-    color: #777400; }
+    color: #0035ff; }
   50% {
-    color: #ff76ef; }
+    color: #000000; }
   75% {
     color: #0035ff; }
   100% {
-    color: #34ff00; } }
+    color: #000000; } }
 a {
   text-decoration: none;
-  color: black; }
+  color: black;
+  font-weight: 300; }
 
 nav {
   font-size: 1em;
@@ -241,10 +242,12 @@ li.block img:hover {
   background-image: -webkit-linear-gradient(#437ffc, #ffbdeb, white);
   background-image: linear-gradient(#437ffc, #ffbdeb, white);
   background-repeat: no-repeat;
-  height: 100vh; }
+  height: 100vh;
+  font-family: "sofia-pro",sans-serif; }
 
 .about a {
-  color: white; }
+  color: white;
+  font-weight: 300; }
 
 .aboutsection {
   float: left;
@@ -280,10 +283,10 @@ li.block img:hover {
   text-indent: opx; }
 
 .about h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "sofia-pro", sans-serif;
   clear: both;
   color: white;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.4641em; }
   @media (min-width: 40em) and (max-width: 64em) {
     .about h1 {
@@ -293,13 +296,15 @@ li.block img:hover {
       font-size: 3.15733em; } }
 
 .about h3 {
-  font-size: 1em;
-  font-weight: 600; }
+  font-size: 0.88889em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300; }
 
 .aboutsection lh {
   padding-bottom: 3px;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 10px; }
 
 .jobtitle {
@@ -317,7 +322,8 @@ li.block img:hover {
 .aboutsection ul li {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  font-weight: 300; }
 
 .colophon {
   float: left;
@@ -413,12 +419,15 @@ li.block img:hover {
     .projecttype h1 {
       font-size: 1.333em; } }
 
-@media screen and (max-width: 64em) {
-  .projectinfo p {
-    font-size: 1em; } }
-@media screen and (max-width: 40em) {
-  .projectinfo p {
-    font-size: 0.88889em; } }
+.projectinfo p {
+  font-weight: 300;
+  line-height: 1.5em; }
+  @media screen and (max-width: 64em) {
+    .projectinfo p {
+      font-size: 1em; } }
+  @media screen and (max-width: 40em) {
+    .projectinfo p {
+      font-size: 0.88889em; } }
 
 .workimages {
   clear: both;
@@ -453,7 +462,8 @@ figcaption {
   font-size: 0.88889em;
   border-top: 1px solid black;
   padding-top: 10px;
-  color: gray; }
+  color: gray;
+  text-align: center; }
 
 .back {
   padding: 1em;
@@ -487,12 +497,12 @@ header p {
   font-size: .6em; }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "sofia-pro", sans-serif;
   font-size: 1em;
   font-weight: 400; }
 
 h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "sofia-pro", sans-serif;
   font-size: 1em;
   font-weight: 400; }
 

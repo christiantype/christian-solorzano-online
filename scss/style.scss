@@ -1,7 +1,7 @@
 /* =============== IMPORTS =============== */
 
-@import "../libraries/bourbon/_bourbon.scss";
-@import "../libraries/neat/_neat.scss";
+@import "../libraries/bourbon/bourbon";
+@import "../libraries/neat/neat";
 @import "../modular-scale/modular-scale";
 
 // ------------------------------------------------------------
@@ -46,13 +46,13 @@ $lightcolor: #646464;
 $midcolor: #636363;
 $maincolor: #181818;
 $darkcolor: #e8e8e8;
-$sansserif: 'Open Sans', sans-serif;
 $sansserifweight:100;
 $max-width: em(400);
 $small: new-breakpoint(max-width 64em 12);
 $grid: new-breakpoint(max-width 40em 12);
 $font-family-serif: 'Cardo', serif;
-$font-family-sans: 'Open Sans', sans-serif;
+$font-family-sans: 'sofia-pro', sans-serif;
+
 
 
 /* =============== BODY =============== */
@@ -64,7 +64,7 @@ body {
   background-color: $backgroundc;
   margin-top: 0em;
   color:$maincolor;
-  font-family: $sansserif;
+  font-family: $font-family-sans;
   font-size: ms(0);
   /* @include linear-gradient(to top, #324146, #b7c4ff, #adffe4 ); */
 
@@ -136,16 +136,17 @@ header {
 
 @-webkit-keyframes color-change {
   0% { color: #1d131c; }
-  25% { color: #777400; }
-  50% { color: #ff76ef; }
+  25% { color: #0035ff; }
+  50% { color: #000000; }
   75% { color: #0035ff; }
-  100% { color: #34ff00; }
+  100% { color: #000000; }
 }
 
 
 a {
   text-decoration: none;
   color:black;
+  font-weight: 300;
 }
 nav {
   font-size: ms(0);
@@ -246,6 +247,7 @@ li.block img:hover {
   filter: grayscale(0%);
 
 
+
 }
 
 
@@ -256,11 +258,15 @@ li.block img:hover {
   @include linear-gradient(#437ffc, #ffbdeb, white);
   background-repeat:no-repeat;
   height:100vh;
+  font-family: "sofia-pro",sans-serif;
+
+
 
 }
 
 .about a {
   color:white;
+  font-weight:300;
 }
 
 .aboutsection {
@@ -296,19 +302,21 @@ li.block img:hover {
   font-family: $font-family-sans;
   clear:both;
   color:white;
-  font-weight: 400;
+  font-weight: 300;
   @include ms-respond(font-size, 4);
 }
 
 
 .about h3 {
-  font-size:ms(0);
-  font-weight: 600;
+  font-size:ms(-1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 .aboutsection lh {
   padding-bottom:3px;
   font-size:ms(0);
-  font-weight:600;
+  font-weight:300;
   margin-bottom: 10px;
 }
 
@@ -334,6 +342,7 @@ li.block img:hover {
   list-style:none;
   padding-left:0;
   margin-bottom: 1em;
+  font-weight: 300;
 }
 
 .colophon {
@@ -394,6 +403,8 @@ li.block img:hover {
 }
 
 .projectinfo p {
+  font-weight: 300;
+  line-height:1.5em;
   @include media($small) { // As defined in _grid-settings.scss
     font-size:ms(0)
   }
@@ -430,6 +441,7 @@ figcaption {
   border-top:1px solid black;
   padding-top: 10px;
   color:gray;
+  text-align: center;
 }
 
 .back {
