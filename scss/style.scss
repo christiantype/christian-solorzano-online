@@ -53,7 +53,7 @@ $max-width: em(400);
 $small: new-breakpoint(max-width 64em 12);
 $grid: new-breakpoint(max-width 40em 12);
 $font-family-serif: 'Cardo', serif;
-$font-family-sans: 'canada-type-gibson',sans-serif;
+$font-family-sans: 'neuzeit-grotesk',sans-serif;
 $light:300;
 $regular:400;
 $maxwidth-desktop:62.5em;
@@ -152,6 +152,8 @@ a {
   text-decoration: none;
   color:$midcolor;
   font-weight: $regular;
+  text-transform: uppercase;
+  font-size: ms(-1);
 }
 nav {
   font-size: ms(0);
@@ -264,7 +266,7 @@ li.block img:hover {
   @include linear-gradient(#1e63ff, #ffdeec, white);
   background-repeat:no-repeat;
   height:100vh;
-  font-family: "sofia-pro",sans-serif;
+  font-family: $font-family-sans;
 
 
 
@@ -272,7 +274,6 @@ li.block img:hover {
 
 .about a {
   color:white;
-  font-weight:$regular;
   font-family: $font-family-sans;
 }
 
@@ -472,6 +473,7 @@ figcaption {
   padding-top: 10px;
   color:gray;
   text-align: center;
+  font-weight: $light;
 }
 
 .back {
@@ -499,6 +501,7 @@ footer {
 footer a {
   color:$midcolor;
   font-weight:$light;
+  font-size: ms(0);
 }
 
 .about footer a {

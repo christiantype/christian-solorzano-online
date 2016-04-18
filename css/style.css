@@ -15,7 +15,7 @@ body {
   background-color: #ffffff;
   margin-top: 0em;
   color: #181818;
-  font-family: "canada-type-gibson", sans-serif;
+  font-family: "neuzeit-grotesk", sans-serif;
   font-size: 1em;
   /* @include linear-gradient(to top, #324146, #b7c4ff, #adffe4 ); */ }
   body::after {
@@ -110,7 +110,9 @@ header {
 a {
   text-decoration: none;
   color: #636363;
-  font-weight: 400; }
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.88889em; }
 
 nav {
   font-size: 1em;
@@ -242,12 +244,11 @@ li.block img:hover {
   background-image: linear-gradient(#1e63ff, #ffdeec, white);
   background-repeat: no-repeat;
   height: 100vh;
-  font-family: "sofia-pro",sans-serif; }
+  font-family: "neuzeit-grotesk", sans-serif; }
 
 .about a {
   color: white;
-  font-weight: 400;
-  font-family: "canada-type-gibson", sans-serif; }
+  font-family: "neuzeit-grotesk", sans-serif; }
 
 .aboutsection {
   float: left;
@@ -283,7 +284,7 @@ li.block img:hover {
   text-indent: opx; }
 
 .about h1 {
-  font-family: "canada-type-gibson", sans-serif;
+  font-family: "neuzeit-grotesk", sans-serif;
   clear: both;
   color: white;
   font-weight: 300;
@@ -487,7 +488,8 @@ figcaption {
   border-top: 1px solid black;
   padding-top: 10px;
   color: gray;
-  text-align: center; }
+  text-align: center;
+  font-weight: 300; }
 
 .back {
   padding: 1em;
@@ -511,7 +513,8 @@ footer {
 
 footer a {
   color: #636363;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 1em; }
 
 .about footer a {
   color: #636363; }
@@ -522,12 +525,12 @@ header p {
   font-size: .6em; }
 
 h1 {
-  font-family: "canada-type-gibson", sans-serif;
+  font-family: "neuzeit-grotesk", sans-serif;
   font-size: 1em;
   font-weight: 400; }
 
 h2 {
-  font-family: "canada-type-gibson", sans-serif;
+  font-family: "neuzeit-grotesk", sans-serif;
   font-size: 1em;
   font-weight: 400; }
 
