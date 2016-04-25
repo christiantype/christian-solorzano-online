@@ -48,7 +48,6 @@ $lightcolor: #646464;
 $midcolor: #636363;
 $maincolor: #181818;
 $darkcolor: #e8e8e8;
-$sansserifweight:100;
 $max-width: em(400);
 $small: new-breakpoint(max-width 64em 12);
 $grid: new-breakpoint(max-width 40em 12);
@@ -73,11 +72,49 @@ body {
   font-family: $font-family-sans;
   font-size: ms(0);
   /* @include linear-gradient(to top, #324146, #b7c4ff, #adffe4 ); */
+  @include media($small) { // As defined in _grid-settings.scss
+    @include outer-container(80%);
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    @include outer-container(90%);
+  }
 
 
 }
+/* Create a series of empty pseudo-elements... */
+html:before,html:after,body:before,body:after{
+  content:"";
+  background:black;
+  position:fixed;
+  display:block;
+  z-index:5;
+}
 
-
+/* ...and position them! */
+html:before{
+  height:10px;
+  left:0;
+  right:0;
+  top:0;
+}
+html:after{
+  width:10px;
+  top:0;
+  right:0;
+  bottom:0;
+}
+body:before{
+  height:10px;
+  right:0;
+  bottom:0;
+  left:0;
+}
+body:after{
+  width:10px;
+  top:0;
+  bottom:0;
+  left:0;
+}
 
 
 
@@ -106,8 +143,10 @@ body {
 
 
 header {
+
+
   @include outer-container(100%);
-  padding: 1em 0em 1em 0em ;
+  padding: 2em 0em 1em 0em ;
   @include span-columns(12);
   margin-bottom: 1em;
   top: 0;
@@ -129,7 +168,8 @@ header {
 
 
 #logo a {
-  font-size: ms(0);
+  vertical-align: text-bottom;
+  font-size: ms(3);
   font-weight: $regular;
   letter-spacing: 1px;
   -webkit-animation: color-change 5s infinite;
@@ -142,19 +182,26 @@ header {
 @-webkit-keyframes color-change {
   0% { color: #1d131c; }
   25% { color: #0035ff; }
-  50% { color: #000000; }
+  50% { color: #ff72e2; }
   75% { color: #0035ff; }
   100% { color: #000000; }
 }
 
 
 a {
+  vertical-align: text-bottom;
   text-decoration: none;
   color:$midcolor;
   font-weight: $regular;
-  text-transform: uppercase;
-  font-size: ms(-1);
+  font-size: ms(0);
 }
+
+
+a:hover {
+  color:blue;
+}
+
+
 nav {
   font-size: ms(0);
   color:black;
@@ -433,7 +480,7 @@ li.block img:hover {
 }
 
 .projectinfo p {
-  font-size: ms(1);
+  font-size: ms(0);
   font-weight: $light;
   line-height:1.5em;
   @include media($small) { // As defined in _grid-settings.scss
@@ -493,7 +540,7 @@ figcaption {
 
 footer {
   @include span-columns(12);
-  padding: 1em;
+  padding: 2em;
   text-align: center;
 
 }
