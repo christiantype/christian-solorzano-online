@@ -76,7 +76,7 @@ body {
     @include outer-container(80%);
   }
   @include media($grid) { // As defined in _grid-settings.scss
-    @include outer-container(90%);
+    @include outer-container(80%);
   }
 
 
@@ -149,7 +149,8 @@ header {
   padding: 2em 0em 1em 0em ;
   @include span-columns(12);
   margin-bottom: 1em;
-  top: 0;
+
+
 
 }
 
@@ -194,11 +195,12 @@ a {
   color:$midcolor;
   font-weight: $regular;
   font-size: ms(0);
+  color:blue;
 }
 
 
 a:hover {
-  color:blue;
+  color:black;
 }
 
 
@@ -245,6 +247,8 @@ nav ul li:nth-last-child(1) {
 
 
 
+
+
 #work {
   clear:both;
   @include outer-container(90%);
@@ -277,7 +281,7 @@ li.block {
   font-size: ms(-3);
   font-weight: $regular;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.0px;
 }
 
 
@@ -327,10 +331,10 @@ li.block img:hover {
 .aboutsection {
   @include span-columns(3);
   font-size: ms(0);
-  border-top:1px solid black;
+  border-top: 1px solid black;
   @include media($small) { // As defined in _grid-settings.scss
     @include span-columns(6);
-    @include nth-omega(odd);
+    @include omega(odd);
 
 
 

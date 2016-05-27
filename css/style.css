@@ -33,7 +33,7 @@ body {
         display: table; } }
   @media screen and (max-width: 40em) {
     body {
-      max-width: 90%;
+      max-width: 80%;
       margin-left: auto;
       margin-right: auto; }
       body::after {
@@ -109,8 +109,7 @@ header {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  margin-bottom: 1em;
-  top: 0; }
+  margin-bottom: 1em; }
   header::after {
     clear: both;
     content: "";
@@ -164,10 +163,11 @@ a {
   text-decoration: none;
   color: #636363;
   font-weight: 400;
-  font-size: 1em; }
+  font-size: 1em;
+  color: blue; }
 
 a:hover {
-  color: blue; }
+  color: black; }
 
 nav {
   font-size: 1em;
@@ -276,7 +276,7 @@ li.block {
   font-size: 0.70233em;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: 1.0px; }
 
 li.block img {
   width: 100%; }
