@@ -138,7 +138,7 @@ header {
 
 #logo a {
   vertical-align: text-bottom;
-  font-size: 1.42383em;
+  font-size: 1.125em;
   font-weight: 400;
   letter-spacing: 1px;
   -webkit-animation: color-change 5s infinite;
@@ -153,7 +153,7 @@ header {
   25% {
     color: #0035ff; }
   50% {
-    color: #ff72e2; }
+    color: #232636; }
   75% {
     color: #0035ff; }
   100% {
@@ -185,6 +185,7 @@ nav {
       display: block;
       margin-right: 2.35765%;
       width: 100%;
+      margin-top: .5em;
       text-align: left;
       font-size: 0.88889em; }
       nav:last-child {
@@ -276,7 +277,7 @@ li.block {
   font-size: 0.70233em;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1.0px; }
+  letter-spacing: .5px; }
 
 li.block img {
   width: 100%; }
@@ -472,6 +473,7 @@ li.block img:hover {
       font-size: 1.333em; } }
 
 .projecttype {
+  color: #979797;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -528,7 +530,7 @@ li.block img:hover {
         margin-right: 0; } }
 
 .workimages img {
-  max-width: 60%;
+  max-width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;

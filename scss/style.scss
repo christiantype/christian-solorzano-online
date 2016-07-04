@@ -170,7 +170,7 @@ header {
 
 #logo a {
   vertical-align: text-bottom;
-  font-size: ms(3);
+  font-size: ms(1);
   font-weight: $regular;
   letter-spacing: 1px;
   -webkit-animation: color-change 5s infinite;
@@ -183,7 +183,7 @@ header {
 @-webkit-keyframes color-change {
   0% { color: #1d131c; }
   25% { color: #0035ff; }
-  50% { color: #ff72e2; }
+  50% { color: #232636; }
   75% { color: #0035ff; }
   100% { color: #000000; }
 }
@@ -211,9 +211,10 @@ nav {
   @include span-columns(8);
   @include media($small) { // As defined in _grid-settings.scss
     @include span-columns(12);
-//    margin-top: 1em;
+    margin-top: .5em;
     text-align: left;
     font-size: ms(-1);
+
   }
 
 }
@@ -281,7 +282,7 @@ li.block {
   font-size: ms(-3);
   font-weight: $regular;
   text-transform: uppercase;
-  letter-spacing: 1.0px;
+  letter-spacing: .5px;
 }
 
 
@@ -471,6 +472,7 @@ li.block img:hover {
 
 
 .projecttype {
+  color:lighten( $lightcolor, 20% );
   @include span-columns(4);
   @include omega();
   @include media($small) { // As defined in _grid-settings.scss
@@ -506,7 +508,7 @@ li.block img:hover {
 }
 
 .workimages img {
-  max-width:60%;
+  max-width:70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
