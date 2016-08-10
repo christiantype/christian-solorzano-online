@@ -315,7 +315,7 @@ li.block img:hover {
 
 
 .about {
-  @include linear-gradient(#1e63ff, #ffdeec, white);
+  /* @include linear-gradient(#4d64ff, #ffd0d9, white); */
   background-repeat:no-repeat;
   height:100vh;
   font-family: $font-family-sans;
@@ -325,7 +325,7 @@ li.block img:hover {
 }
 
 .about a {
-  color:white;
+  color:$maincolor;
   font-family: $font-family-sans;
 }
 
@@ -347,7 +347,9 @@ li.block img:hover {
 
 }
 
-
+.resume a {
+  text-decoration: underline
+}
 
 
 
@@ -361,7 +363,7 @@ li.block img:hover {
 .about h1 {
   font-family: $font-family-sans;
   clear:both;
-  color:white;
+  color:$maincolor;
   font-weight: 300;
   @include ms-respond(font-size, 4);
 }

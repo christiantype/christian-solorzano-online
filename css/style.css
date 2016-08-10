@@ -295,15 +295,13 @@ li.block img:hover {
 
 /* =============== ABOUT =============== */
 .about {
-  background-color: #1e63ff;
-  background-image: -webkit-linear-gradient(#1e63ff, #ffdeec, white);
-  background-image: linear-gradient(#1e63ff, #ffdeec, white);
+  /* @include linear-gradient(#4d64ff, #ffd0d9, white); */
   background-repeat: no-repeat;
   height: 100vh;
   font-family: "neuzeit-grotesk", sans-serif; }
 
 .about a {
-  color: white;
+  color: #181818;
   font-family: "neuzeit-grotesk", sans-serif; }
 
 .aboutsection {
@@ -334,6 +332,9 @@ li.block img:hover {
       .aboutsection:last-child {
         margin-right: 0; } }
 
+.resume a {
+  text-decoration: underline; }
+
 .aboutsection ul {
   padding-left: opx;
   margin-left: -40px;
@@ -342,7 +343,7 @@ li.block img:hover {
 .about h1 {
   font-family: "neuzeit-grotesk", sans-serif;
   clear: both;
-  color: white;
+  color: #181818;
   font-weight: 300;
   font-size: 1.4641em; }
   @media (min-width: 40em) and (max-width: 64em) {
