@@ -62,10 +62,13 @@ $maxwidth-desktop:62.5em;
 
 /* =============== BODY =============== */
 
+.hideme {
+  opacity:0;
+}
 
 
 body {
-  @include outer-container(70%);
+  @include outer-container(100%);
   background-color: $backgroundc;
   margin-top: 0em;
   color:$maincolor;
@@ -73,10 +76,10 @@ body {
   font-size: ms(0);
   /* @include linear-gradient(to top, #324146, #b7c4ff, #adffe4 ); */
   @include media($small) { // As defined in _grid-settings.scss
-    @include outer-container(80%);
+    @include outer-container(100%);
   }
   @include media($grid) { // As defined in _grid-settings.scss
-    @include outer-container(80%);
+    @include outer-container(100%);
   }
 
 
@@ -144,13 +147,18 @@ body:after{
 
 header {
 
+  clear: both;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 0 2em 0;
 
-  @include outer-container(100%);
-  padding: 2em 0em 1em 0em ;
-  @include span-columns(12);
-  margin-bottom: 1em;
-
-
+  @include media($small) { // As defined in _grid-settings.scss
+    @include outer-container(80%);
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    @include outer-container(80%);
+  }
 
 }
 
@@ -195,7 +203,7 @@ a {
   color:$midcolor;
   font-weight: $regular;
   font-size: ms(0);
-  color:blue;
+  color:$maincolor;
 }
 
 
@@ -252,9 +260,9 @@ nav ul li:nth-last-child(1) {
 
 #work {
   clear:both;
-  @include outer-container(90%);
+  @include outer-container(95%);
   @include media($small) { // As defined in _grid-settings.scss
-    @include outer-container(100%);
+    @include outer-container(95%);
 
   }
   }
@@ -313,6 +321,17 @@ li.block img:hover {
 
 /* =============== ABOUT =============== */
 
+
+#about {
+  @include outer-container(70%);
+    @include media($small) { // As defined in _grid-settings.scss
+     @include outer-container(80%);
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    @include outer-container(80%);
+
+  }
+}
 
 .about {
   /* @include linear-gradient(#4d64ff, #ffd0d9, white); */
@@ -449,12 +468,28 @@ li.block img:hover {
 
 /* =============== WORK =============== */
 
+.worktext {
+  @include outer-container(70%);
+  @include media($small) { // As defined in _grid-settings.scss
+    @include outer-container(80%);
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    @include outer-container(80%);
+  }
+
+}
+
+
 .work  {
   font-size: ms(0);
   @include outer-container(100%);
   clear:both;
   @include media($small) { // As defined in _grid-settings.scss
     @include span-columns(12);
+    @include outer-container(100%);
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    @include outer-container(100%);
   }
 }
 
@@ -474,7 +509,7 @@ li.block img:hover {
 
 
 .projecttype {
-  color:lighten( $lightcolor, 20% );
+  color: $maincolor;
   @include span-columns(4);
   @include omega();
   @include media($small) { // As defined in _grid-settings.scss
@@ -501,6 +536,7 @@ li.block img:hover {
 
 .workimages {
 
+  width:100vw;
   clear:both;
   margin: 2em auto;
   @include span-columns(12);
@@ -510,14 +546,27 @@ li.block img:hover {
 }
 
 .workimages img {
-  max-width:70%;
+  max-width:100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2em;
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
   @include media($small) { // As defined in _grid-settings.scss
     max-width:100%;
   }
+
 
 }
 
@@ -529,6 +578,7 @@ figcaption {
   color:gray;
   text-align: center;
   font-weight: $light;
+  display:none;
 }
 
 .back {
