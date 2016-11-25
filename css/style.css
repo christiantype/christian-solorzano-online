@@ -226,7 +226,8 @@ nav ul li:nth-last-child(1) {
 /* =============== HOME =============== */
 #work {
   clear: both;
-  max-width: 95%;
+  margin-top: 2.75em;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   #work::after {
@@ -235,41 +236,54 @@ nav ul li:nth-last-child(1) {
     display: table; }
   @media screen and (max-width: 64em) {
     #work {
-      max-width: 95%;
+      max-width: 100%;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      margin-top: 1.75em; }
+      #work::after {
+        clear: both;
+        content: "";
+        display: table; } }
+  @media screen and (max-width: 40em) {
+    #work {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: .75em; }
       #work::after {
         clear: both;
         content: "";
         display: table; } }
 
+#work h1 {
+  text-align: left;
+  font-size: 4.62363em; }
+
 li.block {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
-  margin: .2em; }
+  width: 31.76157%;
+  margin: 0 0 1.5em 0;
+  width: 33.33%; }
   li.block:last-child {
     margin-right: 0; }
   @media screen and (max-width: 64em) {
-    li.block {
-      margin: 0 auto;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%; }
-      li.block:last-child {
-        margin-right: 0; }
-      li.block:nth-child(3n) {
-        margin-right: 0; }
-      li.block:nth-child(3n+1) {
-        clear: left; } }
-  @media screen and (max-width: 40em) {
     li.block {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 48.82117%;
+      width: 50%;
+      margin: 0 0 1.5em 0; }
+      li.block:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 40em) {
+    li.block {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
       margin: 0 auto; }
       li.block:last-child {
         margin-right: 0; }
@@ -293,16 +307,22 @@ li.block {
 li.block img {
   width: 100%; }
 
-li.block img {
+/*li.block img {
   -webkit-animation-name: FadeIn;
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-duration: .8s;
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
+  filter: grayscale(100%);
+}
 
-li.block img:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%); }
+// li.block img:hover {
+  //-webkit-filter: grayscale(0%);
+  //filter: grayscale(0%);
+
+
+
+//}
+
 
 /* =============== ABOUT =============== */
 #about {
@@ -409,7 +429,7 @@ li.block img:hover {
 
 .date {
   font-size: 0.79012em;
-  color: #646464; }
+  color: #cecece; }
 
 .description {
   font-size: 1em;
@@ -422,6 +442,7 @@ li.block img:hover {
   font-weight: 300; }
 
 .social {
+  margin-top: 2.5em;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -429,6 +450,21 @@ li.block img:hover {
   text-align: center; }
   .social:last-child {
     margin-right: 0; }
+
+.social img {
+  width: 70%; }
+  @media screen and (max-width: 64em) {
+    .social img {
+      width: 90%; } }
+  @media screen and (max-width: 40em) {
+    .social img {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto; }
+      .social img::after {
+        clear: both;
+        content: "";
+        display: table; } }
 
 .social h2 {
   font-size: 0.79012em;
@@ -619,7 +655,7 @@ li.block img:hover {
   margin-right: auto;
   opacity: 0;
   /* make things invisible upon start */
-  -webkit-animation: fadeIn ease-in;
+  -webkit-animation: fadeIn ease-in 1;
   /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;

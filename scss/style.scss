@@ -44,10 +44,9 @@ $max-width: em(62.5em) !default;
 
 
 $backgroundc: #ffffff;
-$lightcolor: #646464;
+$lightcolor: #cecece;
 $midcolor: #636363;
 $maincolor: #181818;
-$darkcolor: #e8e8e8;
 $max-width: em(400);
 $small: new-breakpoint(max-width 64em 12);
 $grid: new-breakpoint(max-width 40em 12);
@@ -260,24 +259,39 @@ nav ul li:nth-last-child(1) {
 
 #work {
   clear:both;
-  @include outer-container(95%);
+  margin-top: 2.75em;
+  @include outer-container(100%);
   @include media($small) { // As defined in _grid-settings.scss
-    @include outer-container(95%);
+    @include outer-container(100%);
+    margin-top: 1.75em;
+
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    @include outer-container(100%);
+    margin-top: .75em;
 
   }
   }
+
+#work h1 {
+  text-align: left;
+  font-size:ms(13);
+}
 
 li.block {
-  @include span-columns(3);
+  @include span-columns(4);
   // @include omega(4n);
-  margin: .2em;
+  margin: 0 0 1.5em 0;
+width:33.33%;
   @include media($small) { // As defined in _grid-settings.scss
-    margin: 0 auto;
-   @include span-columns(4);
-    @include omega(3n);
+   @include span-columns(6);
+    width:50%;
+    margin: 0 0 1.5em 0;
+
+
   }
  @include media($grid) { // As defined in _grid-settings.scss
-   @include span-columns(6);
+   @include span-columns(12);
    @include omega-reset(3n);
    @include omega(2n);
    margin: 0 auto;
@@ -296,13 +310,12 @@ li.block {
 
 
 
-
 li.block img {
   width:100%;
 }
 
 
-li.block img {
+/*li.block img {
   -webkit-animation-name: FadeIn;
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-duration: .8s;
@@ -310,13 +323,13 @@ li.block img {
   filter: grayscale(100%);
 }
 
-li.block img:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+// li.block img:hover {
+  //-webkit-filter: grayscale(0%);
+  //filter: grayscale(0%);
 
 
 
-}
+//}
 
 
 /* =============== ABOUT =============== */
@@ -427,8 +440,22 @@ li.block img:hover {
 }
 
 .social {
+  margin-top: 2.5em;
   @include span-columns(12);
   text-align: center;
+
+}
+
+.social img {
+  width:70%;
+  @include media($small) { // As defined in _grid-settings.scss
+    width:90%;
+  }
+  @include media($grid) { // As defined in _grid-settings.scss
+    @include outer-container(90%);
+  }
+
+
 }
 
 .social h2 {
