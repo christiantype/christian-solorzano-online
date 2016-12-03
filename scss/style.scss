@@ -3,6 +3,7 @@
 @import "../libraries/bourbon/bourbon";
 @import "../libraries/neat/neat";
 @import "../modular-scale/modular-scale";
+@import "../libraries/vendor/normalize";
 
 // ------------------------------------------------------------
 // Omega Reset
@@ -50,7 +51,7 @@ $maincolor: #181818;
 $max-width: em(400);
 $small: new-breakpoint(max-width 64em 12);
 $grid: new-breakpoint(max-width 40em 12);
-$font-family-serif: 'Cardo', serif;
+$font-family-serif: 'leitura-news', serif;
 $font-family-sans: 'neuzeit-grotesk',sans-serif;
 $light:300;
 $regular:400;
@@ -156,7 +157,7 @@ header {
     @include outer-container(80%);
   }
   @include media($grid) { // As defined in _grid-settings.scss
-    @include outer-container(80%);
+    @include outer-container(85%);
   }
 
 }
@@ -341,7 +342,7 @@ li.block img {
      @include outer-container(80%);
   }
   @include media($grid) { // As defined in _grid-settings.scss
-    @include outer-container(80%);
+    @include outer-container(85%);
 
   }
 }
@@ -501,7 +502,7 @@ li.block img {
     @include outer-container(80%);
   }
   @include media($grid) { // As defined in _grid-settings.scss
-    @include outer-container(80%);
+    @include outer-container(85%);
   }
 
 }
@@ -640,6 +641,10 @@ footer a {
   color:$midcolor;
 }
 
+footer p {
+  font-size:ms(-2);
+  color:$lightcolor;
+}
 
 
 /* =============== TYPOGRAPHY =============== */
