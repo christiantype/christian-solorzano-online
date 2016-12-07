@@ -806,8 +806,9 @@ li.block img {
   font-family: "neuzeit-grotesk", sans-serif;
   clear: both;
   color: #181818;
-  font-weight: 300;
-  font-size: 1.4641em; }
+  font-weight: 600;
+  font-size: 1.4641em;
+  letter-spacing: -1.5px; }
   @media (min-width: 40em) and (max-width: 64em) {
     .about h1 {
       font-size: calc( 1.4641em + 1.69323 * ( ( 100vw - 40em) / 24 ) ); } }
